@@ -26,7 +26,7 @@ def find_file_by_name(context, search_term, case_sensitive=True):
             file_name = file_name.lower()
             search_term = search_term.lower()
 
-        elif search_term in file_name:  
+        if search_term in file_name:  
             found_files.append(path)
 
     return found_files
