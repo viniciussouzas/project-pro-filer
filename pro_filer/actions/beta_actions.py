@@ -1,11 +1,12 @@
 """Arquivo que estudantes devem editar"""
-
+def count_slashes_file(string):
+    return string.count("/")
 
 def show_deepest_file(context):
     if not context["all_files"]:
         print("No files found")
     else:
-        deepest_file = max(context["all_files"], key=len)
+        deepest_file = max(context["all_files"], key=count_slashes_file)
         print(f"Deepest file: {deepest_file}")
 
 
