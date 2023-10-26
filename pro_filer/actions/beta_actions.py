@@ -23,11 +23,8 @@ def find_file_by_name(context, search_term, case_sensitive=True):
         file_name = path.split("/")[-1]
 
         if not case_sensitive:
-            lower_file_name = file_name.lower()
-            lower_search_term = search_term.lower()
-
-            if lower_search_term in lower_file_name:
-              found_files.append(path)
+            file_name = file_name.lower()
+            search_term = search_term.lower()
 
         elif search_term in file_name:  
             found_files.append(path)
